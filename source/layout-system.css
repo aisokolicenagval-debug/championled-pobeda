@@ -122,10 +122,10 @@ main .section-head h2,
 /* A photographic explanation on the left, three readable steps on the right. */
 .installation-layout { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch; }
 .installation-feature { display:flex; flex-direction:column; border-radius:10px; overflow:hidden; background:#f3f3f3; }
-.installation-photo-button,
-.installation-step-image { padding:0; border:0; background:transparent; cursor:zoom-in; }
-.installation-photo-button { width:100%; height:350px; flex:1 1 350px; min-height:0; }
-.installation-photo-button img { width:100%; height:100%; object-fit:contain; }
+.installation-photo,
+.installation-step-image { padding:0; border:0; background:transparent; cursor:default; }
+.installation-photo { width:100%; height:350px; flex:1 1 350px; min-height:0; }
+.installation-photo img { width:100%; height:100%; object-fit:contain; }
 .installation-feature-copy { padding:22px 26px 26px; }
 .installation-feature-copy h3,
 .installation-step h3 { font-family:Science,Arial,sans-serif; font-size:var(--card-title-size); font-weight:400; line-height:1.2; text-transform:uppercase; }
@@ -148,7 +148,7 @@ main .section-head h2,
 }
 @media(max-width:760px) {
  .installation-layout { grid-template-columns:1fr; gap:24px; }
- .installation-photo-button { flex:none; height:320px; }
+ .installation-photo { flex:none; height:320px; }
  .installation-feature-copy { padding:22px; }
  .installation-step { grid-template-columns:130px minmax(0,1fr); gap:18px; padding:14px 0; }
  .installation-step-image { width:130px; height:150px; }
@@ -160,15 +160,15 @@ main .section-head h2,
  .installation-step-image { width:110px; }
  .installation-step h3 { font-size:16px; }
 }
-.installation-photo-button,
+.installation-photo,
 .installation-step-image { position:relative; }
 /* The lock is the main headline; the photograph fills its portrait frame. */
 @media(min-width:761px) {
  .installation-layout { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); }
 }
 .installation-feature { background:#eee; align-self:start; }
-.installation-photo-button { display:block; flex:none; height:auto; aspect-ratio:1439 / 1620; }
-.installation-photo-button img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.installation-photo { display:block; flex:none; height:auto; aspect-ratio:1439 / 1620; }
+.installation-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .installation-photo-caption {
  position:absolute; left:16px; bottom:16px; max-width:calc(100% - 64px);
  padding:6px 9px; border-radius:4px; background:#ffffffdf; color:#1d2731;
@@ -179,12 +179,12 @@ main .section-head h2,
  letter-spacing:.025em; line-height:1.3; text-transform:uppercase;
 }
 @media(max-width:760px) {
- .installation-photo-button { height:auto; }
+ .installation-photo { height:auto; }
 }
 
 /* Both columns share the height established by the three-step diagram. */
 .installation-feature { align-self:stretch; min-height:0; }
-.installation-photo-button { flex:1; height:100%; min-height:0; aspect-ratio:auto; }
+.installation-photo { flex:1; height:100%; min-height:0; aspect-ratio:auto; }
 .installation-step h3 { font-size:14px; }
 
 .installation-step-copy { max-width:290px; }
@@ -197,7 +197,7 @@ main .section-head h2,
 }
 /* Desktop alternative: three illustrated steps across the right column. */
 @media(min-width:1001px) {
- .installation-photo-button { flex:none; height:auto; aspect-ratio:1439 / 1620; }
+ .installation-photo { flex:none; height:auto; aspect-ratio:1439 / 1620; }
  .installation-steps {
   grid-template-columns:repeat(3,minmax(0,1fr));
   grid-template-rows:minmax(0,1fr) auto auto;
@@ -307,7 +307,7 @@ main .section-head h2,
  #control .control-visual { aspect-ratio:1.5; }
  #control .control-body h3 { min-height:0; }
  .installation-layout { grid-template-columns:1fr; gap:16px; }
- .installation-photo-button { flex:none; height:auto; aspect-ratio:1439 / 1620; }
+ .installation-photo { flex:none; height:auto; aspect-ratio:1439 / 1620; }
  .installation-steps { padding:0 16px 16px; }
  .installation-step { grid-template-columns:110px minmax(0,1fr); gap:12px; }
  .installation-step-image { width:110px; height:140px; }
@@ -390,4 +390,12 @@ main .section-head h2,
 @media(max-width:600px) {
  .light-slider-meta { margin:12px 0 16px; }
  .light-slider-position { font-size:12px; }
+}
+
+/* Native transparent Eco cross-section, dark like the Pro drawings. */
+.mounting-grid.single .mounting-detail { grid-template-columns:128px minmax(0,1fr); gap:16px; }
+.mounting-detail img.mounting-profile-eco { width:128px; height:auto; filter:none; background:transparent; }
+@media(max-width:600px) {
+  .mounting-grid.single .mounting-detail { grid-template-columns:88px minmax(0,1fr); gap:14px; }
+  .mounting-detail img.mounting-profile-eco { width:88px; }
 }
